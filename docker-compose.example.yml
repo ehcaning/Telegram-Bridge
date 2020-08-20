@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+    telegram-bridge:
+        build: .
+        image: telegram-bridge:latest
+        container_name: telegram-bridge
+        ports:
+            - '3040:3000'
+        restart: unless-stopped
+        # environment:
+            # - MONGODB=MONGODB
+            # - JWT_SECRET=JWT_SECRET
+            # - INIT_USERNAME=INIT_USERNAME
+            # - INIT_PASSWORD=INIT_PASSWORD
