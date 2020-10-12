@@ -1,0 +1,13 @@
+kind: ExternalService
+name: tlg-bridge
+spec:
+  allow_http: true
+  domains:
+    - name: tlg2.ehcan.ir
+  image: 'ehcaning/telegram-bridge:latest'
+  image_pull_policy: IfNotPresent
+  path: /
+  port: 3000
+  replicas: 1
+  resources:
+    memory: 100Mi
