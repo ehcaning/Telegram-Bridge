@@ -3,7 +3,7 @@ version: '3.8'
 services:
     telegram-bridge:
         build: .
-        image: telegram-bridge:latest
+        image: ehcaning/telegram-bridge:latest
         container_name: telegram-bridge
         ports:
             - '3040:3000'
